@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login">
+   <div class="container">
+    <form action="" class="form" onsubmit="return false">
+        <h1>SIGN IN</h1>
+       <div class="login__mode-block">
+            <div class="login__mode">
+                <input type="radio" name="login-mode" checked id="signin" class="login__radio signIn">
+                <label for="signin" class="login__label">SIGN IN </label>
+            </div>
+            <div class="login__mode">
+                <input type="radio" name="login-mode" id="login" class="login__radio">
+                <label for="login" class="login__label">SIGN UP </label>
+            </div>
+       </div>
+       <div class="login__user">
+            <input type="text" required  class="login__user-name login__inp" id="username">
+            <div class="error-text"></div>
+            <label for="username" class="user__label">username</label>
+       </div>
+       <div class="login__user">
+            <input type="text" required id="pass" class="login__user-password login__inp">
+            <div class="error-text"></div>
+            <label for="pass" class="user__label">password</label>
+       </div>
+      
+       <button class="login__submit">SEND</button>
+       <div class="api-error"></div>
+    </form>
+   </div></div>
+</body>
+</html>

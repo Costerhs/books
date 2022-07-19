@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="book">
+        <div class="container">
+            <h1 class="book__title">Список книг</h1>
+            <h1 class="book__empty"></h1>
+
+            <div class="book__list">
+            </div>
+            <div class="book__add">
+                <button class="book__btn">Добавить книгу</button>
+            </div>
+          
+        </div>
+        <div class="book__form book__form-passive">
+    
+            <form action="" class="form"  onsubmit="return false">
+                <h1 class="form__title">Добавить книгу</h1>
+                <div class="form__item">
+                    <input type="text" required class="form__inp" id="bookName">
+                    <label class="book__label" for="bookName">Название книги</label>
+                </div>
+                <div class="form__item">
+                    <input type="text" required class="form__inp" id="bookAuthor">
+                    <label class="book__label" for="bookAuthor">Автор книги</label>
+                </div>
+                <div class="form__item">
+                    <input type="text" required class="form__inp" id="bookPublic">
+                    <label class="book__label" for="bookPublic">Дата публикации </label>
+                </div>
+                <div class="form__item">
+                    <input type="text" required class="form__inp" id="bookHouse">
+                    <label class="book__label" for="bookHouse">PublishHouse</label>
+                </div>
+                <div class="form__item">
+                    <input type="text" required class="form__inp" id="bookPage">
+                    <label class="book__label" for="bookPage">PagesNumber</label>
+                </div>
+                <div class="form__item">
+                    <input type="text" required class="form__inp" id="bookGenres">
+                    <label class="book__label" for="bookGenres">Genres</label>
+                </div>
+                <div class="form__item">
+                    <input type="text" required class="form__inp" id="bookLang">
+                    <label class="book__label" for="bookLang">Original Lang</label>
+                </div>
+                <button class="book__submit ">Add</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

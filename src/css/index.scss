@@ -1,0 +1,33 @@
+@import './_reset.scss';
+@import './sign/sign.scss';
+@import './book/book.scss';
+
+body{
+    background: #0e1739;
+}
+.container{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1199px) {
+    .container{
+        max-width: 1140px;
+    }
+}
+@media (max-width: 991px) {
+    .container{
+        max-width: 960px;
+    }
+}
+@media (max-width: 767px) {
+    .container{
+        max-width: 720px;
+    }
+}
+@media (max-width: 575px) {
+    .container{
+        max-width: 520px;
+    }
+}

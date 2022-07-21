@@ -9,3 +9,17 @@ const validation = (input) => {
 }
 
 export default validation;
+
+export const passwordValidation = () => {
+    const password = document.querySelector('#pass');
+    const confPass = document.querySelector('#conf-pass');
+
+    if (password.value !== confPass.value) {
+        confPass.nextElementSibling.textContent = 'пароли должны совпадать';
+        return false
+    }
+    else {
+        confPass.nextElementSibling.textContent = '';
+        return true
+    }
+}

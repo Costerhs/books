@@ -1,18 +1,15 @@
 import { sendUserDataApi } from "../command/api/api";
+import setActiveUser from "./setActiveUser";
 
-const sendUserData = async (name, password, actualApi) => {
+const sendUserData = async (user, actualApi) => {
     const errorText = document.querySelector('.api-error')
-    const user = {
-        "username": name.value,
-        "password": password.value
-    }
+    const response = await sendUserDataApi(actualApi, user)
 
-    const response = sendUserDataApi(actualApi, user)
-
-    if (typeof response === 'string') {
-        errorText.textContent = response;
+    if (typeof response === 'string') errorText.textContent = response;
+    else {
+        setActiveUser(response.token);
+        window.location.replace("books.html")
     }
-    return response
 }
 
 export default sendUserData;

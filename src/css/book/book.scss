@@ -59,6 +59,10 @@
     }
     .book__add {
         margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
     .book__btn {
         width: 200px;
@@ -69,6 +73,16 @@
         transition: all 0.2s;
         &:hover{
             box-shadow: 0 0 10px white;
+        }
+    }
+    .book__logOut{
+        border-radius: 20px;
+        width: 140px;
+        border: 0;
+        background: rgb(204, 70, 70);
+        color: white;
+        &:hover{
+            box-shadow:0 0 20px rgb(204, 70, 70) ;
         }
     }
 
@@ -139,7 +153,6 @@
         height: 30px;
         border-radius: 10px;
         border: 0;
-        // margin-top: 30px;
         font-size: 16px;
         background:rgba(255, 255, 255, 0.87);
         transition: all 0.3s;
@@ -148,21 +161,35 @@
             background: white;
         }
     }
+    .form-like{
+        width: auto;
+        height: auto;
+        display: flex;
+    }
+    .heart-label{
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url(../img/icon/like.svg) no-repeat;
+        background-size: contain;
+    }
     .book__del{
-        border: 1px solid red;
+        width: 20px;
+        height: 20px;
+        background: url(../img/icon/cart.svg);
     }
     .book__favorite{
         appearance: none;
+        padding: 0px;
+        margin: 0px;
     }
     .book__favorite:checked+.heart-label{
-        color: red;
+        background: url(../img/icon/active-like.svg) no-repeat;
     }
     .book__empty{
         color: white;
-        // font-size: 20px;
         text-shadow:  0 0 10px white;
         animation: just 3s ease-in-out 2s infinite alternate;
-        // transition: text-shadow ease-in-out;
     }
     @keyframes just{
         from{
@@ -207,4 +234,20 @@
             text-shadow:  0 0 11px white;
         }
     }
+    .form__inp--spin::-webkit-inner-spin-button,
+    .form__inp--spin::-webkit-outer-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    .book__user{
+        width: 100%;
+        text-align: right;
+       
+    }
+    .book__username{
+        color: white;
+        font-size: 26px;
+        text-shadow:  0 0 10px violet;
+    }
+    
 }

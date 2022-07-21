@@ -9,13 +9,18 @@
 <body>
     <div class="book">
         <div class="container">
+            <div class="book__user">
+                <div class="book__username"></div>
+            </div>
             <h1 class="book__title">Список книг</h1>
             <h1 class="book__empty"></h1>
 
             <div class="book__list">
+               
             </div>
             <div class="book__add">
                 <button class="book__btn">Добавить книгу</button>
+                <button class="book__logOut">Выйти</button>
             </div>
           
         </div>
@@ -32,7 +37,7 @@
                     <label class="book__label" for="bookAuthor">Автор книги</label>
                 </div>
                 <div class="form__item">
-                    <input type="text" required class="form__inp" id="bookPublic">
+                    <input type="number" required class="form__inp form__inp--spin" id="bookPublic">
                     <label class="book__label" for="bookPublic">Дата публикации </label>
                 </div>
                 <div class="form__item">
@@ -40,7 +45,7 @@
                     <label class="book__label" for="bookHouse">PublishHouse</label>
                 </div>
                 <div class="form__item">
-                    <input type="text" required class="form__inp" id="bookPage">
+                    <input type="number" required class="form__inp form__inp--spin" id="bookPage">
                     <label class="book__label" for="bookPage">PagesNumber</label>
                 </div>
                 <div class="form__item">
@@ -54,6 +59,28 @@
                 <button class="book__submit ">Add</button>
             </form>
         </div>
+       
+    </div>
+    <div class="loading load--passive">
+        <p>loading...</p>
     </div>
 </body>
 </html>
+
+<!--- 
+     <div class="book__item">
+                    <div class="book__data">
+                        <div class="book__item-title">
+
+                        </div>
+                        <div class="book__author"></div>
+                    </div>
+                    <div class="book__action" id="">
+                        <form>
+                            <input type="checkbox" id="" class="book__favorite">
+                            <label for="" class="heart-label"></label>
+                        </form>
+                        <div class="book__del"></div>
+                    </div>
+                </div>
+                >

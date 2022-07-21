@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="more">
+        <div class="more__back">
+            <a href="books.html">
+                <img src="img/icon/left.svg" alt="error">
+            </a>
+            <p class="back__title"> Назад</p>
+        </div>
+        <div class="more__container">
+          
+         <div class="more__up">
+             <div class="more__title">Убедитесь что вы выбрали книгу</div>
+             <div class="more__author"></div>
+         </div>
+         <div class="more__middle">
+             <div class="more__left">
+                 <div class="more__house"></div>
+                 <div class="more__lang"></div>
+                 <div class="more__data"></div>
+             </div>
+             <div class="more__right">
+                 <div class="more__page"></div>
+                 <div class="more__genres"></div>
+             </div>
+         </div>
+         <div class="more__down">
+             <div class="more__btn"><button class="edit">Редактировать</button></div>
+             <form class="form-like">
+                <input type="checkbox"  id="like" class="more__favorite">
+                <label for="like" class="heart-label"></label>
+            </form>
+            <div class="more__del"></div>
+         </div>
+        </div>
+     </div>
+     <div class="edits edits-pass">
+            <form action="" class="form"  onsubmit="return false">
+                <h1 class="form__title">Редактировать книгу</h1>
+                <div class="form__item">
+                    <input type="text" required class="form__inp" id="editsName">
+                    <label class="edits__label" for="editsName">Название книги</label>
+                </div>
+                <div class="form__item">
+                    <input type="text" required class="form__inp" id="editsAuthor">
+                    <label class="edits__label" for="editsAuthor">Автор книги</label>
+                </div>
+                <div class="form__item">
+                    <input type="number" required class="form__inp form__inp--spin" id="editsPublic">
+                    <label class="edits__label" for="editsPublic">Дата публикации </label>
+                </div>
+                <div class="form__item">
+                    <input type="text" required class="form__inp" id="editsHouse">
+                    <label class="edits__label" for="editsHouse">PublishHouse</label>
+                </div>
+                <div class="form__item">
+                    <input type="number" required class="form__inp form__inp--spin" id="editsPage">
+                    <label class="edits__label" for="editsPage">PagesNumber</label>
+                </div>
+                <div class="form__item">
+                    <input type="text" required class="form__inp" id="editsGenres">
+                    <label class="edits__label" for="editsGenres">Genres</label>
+                </div>
+                <div class="form__item">
+                    <input type="text" required class="form__inp" id="editsLang">
+                    <label class="edits__label" for="editsLang">Original Lang</label>
+                </div>
+                <button class="edits__submit ">Редактировать</button>
+            </form>
+        
+     </div>
+     <div class="loading load--passive">
+        <p>loading...</p>
+    </div>
+</body>
+</html>

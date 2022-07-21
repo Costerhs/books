@@ -10,7 +10,7 @@ const toggleForm = (form, class1, bg, class2) => {
 }
 const addBook = () => {
     const form = document.querySelector('.book__form .form');
-    const btn = document.querySelector('.book__add');
+    const btn = document.querySelector('.book__btn');
     const bookForm = document.querySelector('.book__form');
     const bg = document.querySelector('.book .container');
     const sendBook = document.querySelector('.book__submit');
@@ -22,8 +22,6 @@ const addBook = () => {
     const page = document.getElementById('bookPage');
     const genres = document.getElementById('bookGenres');
     const lang = document.getElementById('bookLang');
-
-    const token = getUserId();
 
     btn?.addEventListener('click', () => {
         toggleForm(bookForm, 'book__form-passive', bg, 'filt')
@@ -47,7 +45,7 @@ const addBook = () => {
 
 
     const bgr = document.querySelector('.book__form');
-    bgr.addEventListener('click', (e) => {
+    bgr?.addEventListener('click', (e) => {
         if (!e.path.includes(form)) {
             toggleForm(bookForm, 'book__form-passive', bg, 'filt')
         }

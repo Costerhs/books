@@ -1,7 +1,7 @@
 @import './_reset.scss';
 @import './sign/sign.scss';
 @import './book/book.scss';
-
+@import './more/more.scss';
 body{
     background: #0e1739;
 }
@@ -30,4 +30,20 @@ body{
     .container{
         max-width: 520px;
     }
+}
+
+.load--active{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba($color: #000000, $alpha: 0.6);
+    color: white;
+    font-size: 50px;
+}
+.load--passive{
+    display: none;
 }

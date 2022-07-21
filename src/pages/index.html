@@ -9,15 +9,15 @@
 <body>
     <div class="login">
    <div class="container">
-    <form action="" class="form" onsubmit="return false">
+    <form action="" class="form" onsubmit="return false" novalidate>
         <h1>SIGN IN</h1>
        <div class="login__mode-block">
-            <div class="login__mode">
-                <input type="radio" name="login-mode" checked id="signin" class="login__radio signIn">
+            <div class="login__mode ">
+                <input type="radio" name="login-mode"  id="signin" class="login__radio signIn">
                 <label for="signin" class="login__label">SIGN IN </label>
             </div>
             <div class="login__mode">
-                <input type="radio" name="login-mode" id="login" class="login__radio">
+                <input type="radio" name="login-mode" checked id="login" class="login__radio signUp">
                 <label for="login" class="login__label">SIGN UP </label>
             </div>
        </div>
@@ -31,10 +31,29 @@
             <div class="error-text"></div>
             <label for="pass" class="user__label">password</label>
        </div>
+       <div class="login__user login__user-more">
+            <input type="text" required id="conf-pass" class="login__user-conf-pass login__inp">
+            <div class="error-text"></div>
+            <label for="conf-pass" class="user__label">confirm password</label>
+        </div>
+        <div class="login__user login__user-more">
+            <input type="text" required id="name" class="login__name login__inp">
+            <div class="error-text"></div>
+            <label for="name" class="user__label">name</label>
+        </div>
+        <div class="login__user login__user-more">
+            <input type="number" required id="age" class="login__years login__inp">
+            <div class="error-text"></div>
+            <label for="age" class="user__label">age</label>
+        </div>
+
       
        <button class="login__submit">SEND</button>
        <div class="api-error"></div>
     </form>
    </div></div>
+   <div class="loading load--passive">
+    <p>loading...</p>
+</div>
 </body>
 </html>

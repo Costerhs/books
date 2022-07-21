@@ -1,4 +1,4 @@
-import { likeBookApi } from "../command/api/api";
+import { updateBookApi } from "../command/api/api";
 import getUserId from "../command/getUserId";
 
 const likeBook = () => {
@@ -10,7 +10,7 @@ const likeBook = () => {
             const obj = {
                 "isFavorite": el.checked
             }
-            likeBookApi(obj, el.id.split(`like-`)[1])
+            updateBookApi(obj, el.id.split(`like-`)[1])
         })
     })
 }

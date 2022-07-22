@@ -8,7 +8,7 @@ const deleteBook = () => {
     books.forEach(book => {
         book.addEventListener('click', async () => {
             const id = book.id;
-            deleteBookApi(id)
+            await deleteBookApi(id)
             showBooks()
         })
     });

@@ -13,16 +13,16 @@ const showBookData = async () => {
     const like = document.querySelector('.more__favorite');
 
     const bookData = await getMoreIfo();
-    if (typeof bookData === 'string' && name != null) {
+    if (typeof bookData === 'string') {
         name.textContent = 'Убедитесь что вы выбрали книгу';
-    } else {
+    } else if (name) {
         name.textContent = bookData.name;
         author.textContent = bookData.author;
-        house.textContent = `Издательство: ${bookData.publishHouse}`;
-        lang.textContent = `Язык Оригинала: ${bookData.originalLanguage}`;
-        date.textContent = `Год Издания: ${bookData.publishYear}`;
-        page.textContent = `Кол-во страниц: ${bookData.pagesNumber}`;
-        genres.textContent = `Жанры: ${bookData.genres}`;
+        house.textContent = `Издательство: ${bookData.publishHouse || ''}`;
+        lang.textContent = `Язык Оригинала: ${bookData.originalLanguage || ''}`;
+        date.textContent = `Год Издания: ${bookData.publishYear || ''}`;
+        page.textContent = `Кол-во страниц: ${bookData.pagesNumber || ''}`;
+        genres.textContent = `Жанры: ${bookData.genres || ''}`;
         like.checked = bookData.isFavorite;
         updateBook(bookData)
     }

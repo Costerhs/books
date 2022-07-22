@@ -10,7 +10,7 @@ const toggleOpenWindow = (close) => {
     editWindow?.addEventListener('click', (e) => {
         if (!e.path.includes(form)) editWindow.classList.remove('edits-act')
     });
-    if (close) editWindow.classList.remove('edits-act')
+
 }
 
 export default toggleOpenWindow;

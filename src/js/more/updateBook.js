@@ -1,5 +1,6 @@
 import { updateBookApi } from "../command/api/api";
 import getActualBook from '../command/getActualBook.js'
+import validationForm from "../command/validationForm";
 import showBookData from "./showBookData";
 const updateBook = (bookData) => {
     const name = document.getElementById('editsName');
@@ -34,9 +35,11 @@ const updateBook = (bookData) => {
             "genres": [genres.value],
             "originalLanguage": lang.value
         }
-        await updateBookApi(book, bookId)
-        showBookData();
-        editWindow.classList.remove('edits-act')
+        if (validationForm(name) === true && validationForm(author) === true) {
+            await updateBookApi(book, bookId)
+            showBookData();
+            editWindow.classList.remove('edits-act')
+        }
     })
 
 }

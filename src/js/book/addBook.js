@@ -1,8 +1,7 @@
-import getUserId from "../command/getUserId";
 import showBooks from "./showBooks";
-import getBooks from "./getBooks";
 import { addBookApi } from "../command/api/api";
 import isExistBook from "./isExistBook";
+import validationForm from "../command/validationForm";
 
 const toggleForm = (form, class1, bg, class2) => {
     form.classList.toggle(`${class1}`);
@@ -37,10 +36,12 @@ const addBook = () => {
             "genres": [genres.value],
             "originalLanguage": lang.value
         }
-        addBookApi(book)
-        showBooks()
-        toggleForm(bookForm, 'book__form-passive', bg, 'filt')
-        isExistBook();
+        if (validationForm(name) === true && validationForm(author) === true) {
+            await addBookApi(book)
+            showBooks()
+            toggleForm(bookForm, 'book__form-passive', bg, 'filt')
+            isExistBook();
+        }
     });
 
 

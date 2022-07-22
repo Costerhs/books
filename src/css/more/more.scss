@@ -6,6 +6,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    .container{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
     .more__back{
         width: 100px;
         height: 30px;
@@ -195,5 +200,34 @@
 }
 
    
-
+@media(max-width:992px){
+    .more{
+        .container{
+            flex-direction: column-reverse;
+            gap: 30px;
+        }
+        .more__container{
+           .more__up{
+            margin-bottom: 120px;
+           }
+           .more__middle{
+            gap: 5px;
+           }
+        }
+    }
+}
         
+
+
+@media (max-width:768px) {
+    .more{
+        .more__container{
+            width: 90%;
+            .more__up{
+                .more__title{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

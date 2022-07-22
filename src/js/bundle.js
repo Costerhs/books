@@ -5,9 +5,9 @@ import { toggleOpenWindow, showBookData, deleteBookInMore, likeBookInMore } from
 import { addBook, showBooks, showMoreInfo, showUserName, getBooks, logOut } from './book'
 import { send, toggleSignMode } from './login';
 
+isAuth();
 likeBookInMore();
 send();
-isAuth();
 getBooks();
 showBooks()
 addBook();

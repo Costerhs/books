@@ -1,6 +1,12 @@
+import getUserId from './command/getUserId'
+
 const isAuth = () => {
-    if (localStorage.getItem('userId') === 'error' && window.location.pathname !== '/index.html' && window.location.pathname !== '/') {
+    if (getUserId() === 'error' && window.location.pathname !== '/index.html' && window.location.pathname !== '/') {
         window.location.replace("index.html");
+    }
+
+    if (getUserId() === null) {
+        localStorage.setItem('userId', 'error')
     }
 }
 
